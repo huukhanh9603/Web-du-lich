@@ -135,8 +135,11 @@ html {
 #slider {
     margin-top: 46px;
     padding-top: 50%;
-    background: url('/assets/img/slider/hanoi.png') top center / cover no-repeat;
+    /* background: url('/assets/img/slider/hanoi.png') top center / cover no-repeat; */
+}
 
+#slider img {
+    margin-top: -800px;
 }
 
 form {
