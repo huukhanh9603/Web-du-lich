@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dunich Travel</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/page-detail.css">
+    <link rel="stylesheet" href="./assets/fonts/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <ul id="nav">
+                <li><a href="#">Trang chủ</a></li>
+                <li>
+                    <a href="">Du lịch trong nước</a>
+                    <ul class="subnav">
+                        <table>
+                            <tr>
+                                <td><div style="padding-left: 13px; font-size: 20px;"><b>MIỀN BẮC</b></div></td>
+                                <td><div style="padding-left: 13px; font-size: 20px;"><b>MIỀN TRUNG</b></div></td>
+                                <td><div style="padding-left: 13px; font-size: 20px;"><b>MIỀN NAM</b></div></td>
+                            </tr>
+                            <tr>
+                                <td><a href=" ">Hà Nội</a></td>
+                                <td><a href="">Huế</a></td>
+                                <td><a href="">Hồ Chí Minh</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href=" ">Nam Định</a></td>
+                                <td><a href="">Đà Nẵng</a></td>
+                                <td><a href="">Phú Quốc</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href=" ">Hạ Long</a></td>
+                                <td><a href="">Đà Lạt</a></td>
+                                <td><a href="">Côn Đảo</a></td>
+                            </tr>
+                        </table>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">Hot tour</a>
+                    <ul class="subnav2">
+                        <li><a href="">Tour khuyến mãi</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">Vận chuyển</a>
+                    <ul class="subnav3">
+                        <li><a href="">Thuê xe</a></li>
+                        <li><a href="">Du thuyền</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Liên hệ</a></li>
+            </ul>
+
+            <div class="search-btn">
+                <i class="search-icon ti-search"></i>
+            </div>
+        </div>
+
+        <div id="slider">
+            <form action="/Search" method="post">
+                <div class="home-search">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="home-search__head box__head">
+                                    <h3>Tìm kiếm tour</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="home-search__input">
+                                    <div class="form-group">
+                                        <input type="radio" name="territory" id="inland" value="inland" checked>
+                                        <label for="inland">Tour trong nước</label>
+                                    </div>
+                                    <div class="form-group">
+                                            <input type="radio" name="territory" id="foreign" value="foreign" disabled>
+                                            <label for="foreign">Tour nước ngoài</label>
+                                        </div>
+                                    <div class="input-group search-quick">
+                                        <input type="text" class="form-control form-fix" placeholder="Tìm nhanh">
+                                        <div class="input-group-append">
+                                            <button class="btn search-q" type="submit">
+                                                <i class="search-icon ti-search"></i>
+                                            </button>
+            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 pr-lg-0">
+                                <div class="form-group group-parent">
+                                    <label for="start_point" class="d-block d-lg-none">Nơi khởi hành:</label>
+                                    <span class="fas fa-map-marker-alt"></span>
+                                    <select name="StartingPoint" id="start_point" class="hidden-arow form-input form-control">
+                                        <option value="">Điểm xuất phát</option>
+                                            <option value="124">H&#224; Nội</option>
+                                            <option value="125">Huế</option>
+                                            <option value="126">Hồ Ch&#237; Minh</option>
+                                            <option value="1123">Nam Định</option>
+                                            <option value="1124">Đ&#224; Nẵng</option>
+                                            <option value="1125">Mộc Ch&#226;u</option>
+                                            <option value="1127">Hạ Long</option>
+                                            <option value="1128">Sapa</option>
+                                            <option value="1129">Đ&#224; Lạt</option>
+                                            <option value="1130">Quy Nhơn</option>
+                                            <option value="1131">Thanh H&#243;a</option>
+                                            <option value="1132">Ph&#250; Quốc</option>
+                                            <option value="1133">C&#244;n Đảo</option>
+                                            <option value="1135">Nha Trang</option>
+                                            <option value="1139">K&#237;ch cầu hậu Covid</option>
+                                            <option value="1140">Tour nghỉ lễ 30-04</option>
+                                            <option value="1141">Tour theo m&#249;a</option>
+                                            <option value="1142">Tour m&#249;a thu</option>
+                                            <option value="1143">Du lịch h&#232;</option>
+                                            <option value="1144">Ninh B&#236;nh</option>
+                                            <option value="1146">C&#224; Mau</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 p-lg-0">
+                                <div class="form-group group-parent">
+                                    <label for="where-togo" class="d-block d-lg-none">Nơi đến:</label>
+                                    <span class="fas fa-map-marker-alt"></span>
+                                    <select name="Destination" id="where-togo" class="hidden-arow form-input form-control ">
+                                        <option value="">Bạn muốn đi đâu</option>
+                                            <option value="124">H&#224; Nội</option>
+                                            <option value="125">Huế</option>
+                                            <option value="126">Hồ Ch&#237; Minh</option>
+                                            <option value="1123">Nam Định</option>
+                                            <option value="1124">Đ&#224; Nẵng</option>
+                                            <option value="1125">Mộc Ch&#226;u</option>
+                                            <option value="1127">Hạ Long</option>
+                                            <option value="1128">Sapa</option>
+                                            <option value="1129">Đ&#224; Lạt</option>
+                                            <option value="1130">Quy Nhơn</option>
+                                            <option value="1131">Thanh H&#243;a</option>
+                                            <option value="1132">Ph&#250; Quốc</option>
+                                            <option value="1133">C&#244;n Đảo</option>
+                                            <option value="1135">Nha Trang</option>
+                                            <option value="1139">K&#237;ch cầu hậu Covid</option>
+                                            <option value="1140">Tour nghỉ lễ 30-04</option>
+                                            <option value="1141">Tour theo m&#249;a</option>
+                                            <option value="1142">Tour m&#249;a thu</option>
+                                            <option value="1143">Du lịch h&#232;</option>
+                                            <option value="1144">Ninh B&#236;nh</option>
+                                            <option value="1146">C&#224; Mau</option>
+                                    </select>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 p-lg-0">
+                                <div class="form-group group-parent">
+                                    <label for="schedule" class="d-block d-lg-none">Lịch trình:</label>
+                                    <span class="fas fa-clock"></span>
+                                    <select name="NumberDay" id="schedule" class="hidden-arow form-input form-control">
+                                        <option value="">Lịch Trình</option>
+                                            <option value="1 Ngày / 0 Đêm"> 1 Ngày / 0 Đêm </option>
+                                            <option value="2 Ngày / 1 Đêm"> 2 Ngày / 1 Đêm </option>
+                                            <option value="3 Ngày / 2 Đêm"> 3 Ngày / 2 Đêm </option>
+                                            <option value="4 Ngày / 3 Đêm"> 4 Ngày / 3 Đêm </option>
+                                            <option value="5 Ngày / 4 Đêm"> 5 Ngày / 4 Đêm </option>
+                                            <option value="6 Ngày / 5 Đêm"> 6 Ngày / 5 Đêm </option>
+                                            <option value="7 Ngày / 6 Đêm"> 7 Ngày / 6 Đêm </option>
+                                            <option value="8 Ngày / 7 Đêm"> 8 Ngày / 7 Đêm </option>
+                                            <option value="9 Ngày / 8 Đêm"> 9 Ngày / 8 Đêm </option>
+                                            <option value="10 Ngày / 9 Đêm"> 10 Ngày / 9 Đêm </option>
+                                            <option value="11 Ngày / 10 Đêm"> 11 Ngày / 10 Đêm </option>
+                                            <option value="12 Ngày / 11 Đêm"> 12 Ngày / 11 Đêm </option>
+                                            <option value="13 Ngày / 12 Đêm"> 13 Ngày / 12 Đêm </option>
+                                            <option value="14 Ngày / 13 Đêm"> 14 Ngày / 13 Đêm </option>
+                                            <option value="15 Ngày / 14 Đêm"> 15 Ngày / 14 Đêm </option>
+                                            <option value="16 Ngày / 15 Đêm"> 16 Ngày / 15 Đêm </option>
+                                            <option value="17 Ngày / 16 Đêm"> 17 Ngày / 16 Đêm </option>
+                                            <option value="18 Ngày / 17 Đêm"> 18 Ngày / 17 Đêm </option>
+                                            <option value="19 Ngày / 18 Đêm"> 19 Ngày / 18 Đêm </option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-3 col-md-6 col-sm-12 p-lg-0">
+                                <div class="form-group group-parent">
+                                    <label for="price-area" class="d-block d-lg-none">Khoảng giá: </label>
+                                    <span class="fas fa-dollar-sign"></span>
+                                    <select name="PriceFrom" id="price-area" class="hidden-arow form-input form-control">
+                                        <option value="">Khoảng giá</option>
+                                        <option value="0-3000000"> Dưới 3 Triệu </option>
+                                        <option value="3000000-10000000"> Từ 3 Triệu - 10 Triệu </option>
+                                        <option value="10000000-25000000"> Từ 10 Triệu - 25 Triệu </option>
+                                        <option value="25000000-40000000"> Từ 25 Triệu - 40 Triệu </option>
+                                        <option value="40000000"> Trên 40 Triệu </option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-2 col-md-6 col-sm-12 pl-lg-0">
+                                <div class="form-btn">
+                                    <button type="submit" class="btn btn-search">
+                                        <i class="search-icon ti-search"></i> Tìm
+                                        kiếm
+                                    </button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div id="content">
+            <div id="content-section">
+                <h2 class="section-heading">DỊCH VỤ CỦA CHÚNG TÔI</h2>
+            </div>
+
+            <div class="services-list">
+                <div class="thuexe" style="width: 340px; margin-right: 10px;">
+                    <div class="my-service__item">
+                        <div class="my-service__icon">
+                            <img src="./assets/img/service2.png" alt>
+                        </div>
+                        <div class="ms-item__head">
+                            <h3>THUÊ XE</h3>
+                        </div>
+                        <div class="my-service__content">
+                            <div class="my-service--text">
+                                " Dunich Travel cung cấp và mang đến cho quý khách dịch vụ cho thuê xe du lịch, xe dịch vụ với giá cực tốt, xe đời mới 16 chỗ; 29 chỗ; 35 chỗ; 45 chỗ … liên hệ để có bảng giá xe du lịch mà Venus Travel đang cung cấp: "
+                            </div>
+                            <div class="my-service--link">
+                                <a href="thue-xe" class="btn read-more">xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="duthuyen" style="width: 340px; margin-right: 10px;">
+                    <div class="my-service__item">
+                        <div class="my-service__icon">
+                            <img src="./assets/img/icon11.png" alt>
+                        </div>
+                        <div class="ms-item__head">
+                            <h3>DU THUYỀN</h3>
+                        </div>
+                        <div class="my-service__content">
+                            <div class="my-service--text">
+                                " Trải nghiệm du lịch đường thủy với các du thuyền nghỉ dưỡng đầy mê hoặc. Truy cập ngay và lựa chọn hành trình phù hợp cho gia đình bạn. "
+                            </div>
+                            <div class="my-service--link">
+                                <a href="du-thuyen" class="btn read-more">xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="combo" style="width: 340px; margin-right: 10px;">
+                    <div class="my-service__item">
+                        <div class="my-service__icon">
+                            <img src="./assets/img/service3.png" alt>
+                        </div>
+                        <div class="ms-item__head">
+                            <h3>COMBO DU LỊCH</h3>
+                        </div>
+                        <div class="my-service__content">
+                            <div class="my-service--text">
+                                " Đặt theo combo, có tất cả các dịch vụ cần thiết "
+                            </div>
+                            <div class="my-service--link">
+                                <a href="combo" class="btn read-more">xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="tour" class="tour-section">            
+            <div class="content-section">
+                <h2 class="section-heading">HOT TOUR</h2>                
+                <div class="tab-content box__content d-none d-lg-block">
+                <div class="tab-pane active" id="hottour1">
+                    <div class="hot-tour__list list-tour">
+                        <div class="list-tour__item">
+                            <div class="list-tour__item-detail">
+                                <div class="list-tour__img">
+                                    <a href=""><img src="./assets/img/slider/Hoian.jpg" alt></a>
+                                    <div class="time-slot">
+                                        <span class="list-tour__time">
+                                            <i class="fas fa-clock"></i>                                            </i>                                            
+                                            3 Ngày/2 Đêm
+                                        </span>
+                                        <span class="list-tour__slot">
+                                        </span>
+                                    </div>
+                                    <div class="list-tour__sale">
+                                        <img src="./assets/img/group.png" alt>
+                                        <div class="sale-detail">
+                                            <p class="sale-text">sale</p>
+                                            <span class="sale-price">
+                                                30
+                                                <span class="unit">%</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-tour__content">
+                                    <div class="list-tour__title">
+                                        <h4>
+                                            <a href="">
+                                                HỘI AN
+                                                <span class="list-tour_time">
+                                                    (3 Ngày/2 Đêm)
+                                                </span>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div class="list-tour__detail">
+                                        <div class="list-tour__left">
+                                            <div class="list-tour__transport">
+                                                <i class="fas fa-walking"></i>
+                                                <span class="transport">Máy Bay & Ô Tô</span>
+                                            </div>
+                                            <div class="list-tour__date">
+                                                <i class="fas fa-calendar-alt"></i>
+                                                <span class="date">2022</span>
+                                            </div>
+                                        </div>
+                                        <div class="list-tour__right">
+                                            <div class="list-tour__price">
+                                                <p class="price-title">giá từ</p>
+                                                <span class="price">3,700,000 đ</span>
+                                            </div>
+                                            <a href="" style="float: right;" class="btn btn--placeholder">Giữ chỗ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="list-tour__item">
+                            <div class="list-tour__item-detail">
+                                <div class="list-tour__img">
+                                    <a href=""><img src="./assets/img/slider/Hue.jpg" alt></a>
+                                    <div class="time-slot">
+                                        <span class="list-tour__time">
+                                            <i class="fas fa-clock"></i>                                            </i>                                            
+                                            2 Ngày/1 Đêm
+                                        </span>
+                                        <span class="list-tour__slot">
+                                        </span>
+                                    </div>
+                                    <div class="list-tour__sale">
+                                        <img src="./assets/img/group.png" alt>
+                                        <div class="sale-detail">
+                                            <p class="sale-text">sale</p>
+                                            <span class="sale-price">
+                                                25
+                                                <span class="unit">%</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-tour__content">
+                                    <div class="list-tour__title">
+                                        <h4>
+                                            <a href="">
+                                                HUẾ
+                                                <span class="list-tour_time">
+                                                    (2 Ngày/1 Đêm)
+                                                </span>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div class="list-tour__detail">
+                                        <div class="list-tour__left">
+                                            <div class="list-tour__transport">
+                                                <i class="fas fa-walking"></i>
+                                                <span class="transport">Máy Bay & Ô Tô</span>
+                                            </div>
+                                            <div class="list-tour__date">
+                                                <i class="fas fa-calendar-alt"></i>
+                                                <span class="date">2022</span>
+                                            </div>
+                                        </div>
+                                        <div class="list-tour__right">
+                                            <div class="list-tour__price">
+                                                <p class="price-title">giá từ</p>
+                                                <span class="price">3,000,000 đ</span>
+                                            </div>
+                                            <a href="" style="float: right;" class="btn btn--placeholder">Giữ chỗ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="list-tour__item">
+                            <div class="list-tour__item-detail">
+                                <div class="list-tour__img">
+                                    <a href=""><img src="./assets/img/slider/hanoi.png" alt></a>
+                                    <div class="time-slot">
+                                        <span class="list-tour__time">
+                                            <i class="fas fa-clock"></i>                                            </i>                                            
+                                            3 Ngày/2 Đêm
+                                        </span>
+                                        <span class="list-tour__slot">
+                                        </span>
+                                    </div>
+                                    <div class="list-tour__sale">
+                                        <img src="./assets/img/group.png" alt>
+                                        <div class="sale-detail">
+                                            <p class="sale-text">sale</p>
+                                            <span class="sale-price">
+                                                20
+                                                <span class="unit">%</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-tour__content">
+                                    <div class="list-tour__title">
+                                        <h4>
+                                            <a href="">
+                                                HÀ NỘI
+                                                <span class="list-tour_time">
+                                                    (3 Ngày/2 Đêm)
+                                                </span>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div class="list-tour__detail">
+                                        <div class="list-tour__left">
+                                            <div class="list-tour__transport">
+                                                <i class="fas fa-walking"></i>
+                                                <span class="transport">Máy Bay & Ô Tô</span>
+                                            </div>
+                                            <div class="list-tour__date">
+                                                <i class="fas fa-calendar-alt"></i>
+                                                <span class="date">2022</span>
+                                            </div>
+                                        </div>
+                                        <div class="list-tour__right">
+                                            <div class="list-tour__price">
+                                                <p class="price-title">giá từ</p>
+                                                <span class="price">2,700,000 đ</span>
+                                            </div>
+                                            <a href="" style="float: right;" class="btn btn--placeholder">Giữ chỗ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="list-tour__item">
+                            <div class="list-tour__item-detail">
+                                <div class="list-tour__img">
+                                    <a href=""><img src="./assets/img/slider/hcm.jpg" alt></a>
+                                    <div class="time-slot">
+                                        <span class="list-tour__time">
+                                            <i class="fas fa-clock"></i>                                            </i>                                            
+                                            2 Ngày/1 Đêm
+                                        </span>
+                                        <span class="list-tour__slot">
+                                        </span>
+                                    </div>
+                                    <div class="list-tour__sale">
+                                        <img src="./assets/img/group.png" alt>
+                                        <div class="sale-detail">
+                                            <p class="sale-text">sale</p>
+                                            <span class="sale-price">
+                                                25
+                                                <span class="unit">%</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-tour__content">
+                                    <div class="list-tour__title">
+                                        <h4>
+                                            <a href="">
+                                                HỒ CHÍ MINH
+                                                <span class="list-tour_time">
+                                                    (2 Ngày/1 Đêm)
+                                                </span>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div class="list-tour__detail">
+                                        <div class="list-tour__left">
+                                            <div class="list-tour__transport">
+                                                <i class="fas fa-walking"></i>
+                                                <span class="transport">Máy Bay & Ô Tô</span>
+                                            </div>
+                                            <div class="list-tour__date">
+                                                <i class="fas fa-calendar-alt"></i>
+                                                <span class="date">2022</span>
+                                            </div>
+                                        </div>
+                                        <div class="list-tour__right">
+                                            <div class="list-tour__price">
+                                                <p class="price-title">giá từ</p>
+                                                <span class="price">3,500,000 đ</span>
+                                            </div>
+                                            <a href="" style="float: right;" class="btn btn--placeholder">Giữ chỗ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="list-tour__item">
+                            <div class="list-tour__item-detail">
+                                <div class="list-tour__img">
+                                    <a href=""><img src="./assets/img/slider/nha trang.jpg" alt></a>
+                                    <div class="time-slot">
+                                        <span class="list-tour__time">
+                                            <i class="fas fa-clock"></i>                                            </i>                                            
+                                            3 Ngày/2 Đêm
+                                        </span>
+                                        <span class="list-tour__slot">
+                                        </span>
+                                    </div>
+                                    <div class="list-tour__sale">
+                                        <img src="./assets/img/group.png" alt>
+                                        <div class="sale-detail">
+                                            <p class="sale-text">sale</p>
+                                            <span class="sale-price">
+                                                15
+                                                <span class="unit">%</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-tour__content">
+                                    <div class="list-tour__title">
+                                        <h4>
+                                            <a href="">
+                                                NHA TRANG
+                                                <span class="list-tour_time">
+                                                    (3 Ngày/2 Đêm)
+                                                </span>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div class="list-tour__detail">
+                                        <div class="list-tour__left">
+                                            <div class="list-tour__transport">
+                                                <i class="fas fa-walking"></i>
+                                                <span class="transport">Máy Bay & Ô Tô</span>
+                                            </div>
+                                            <div class="list-tour__date">
+                                                <i class="fas fa-calendar-alt"></i>
+                                                <span class="date">2022</span>
+                                            </div>
+                                        </div>
+                                        <div class="list-tour__right">
+                                            <div class="list-tour__price">
+                                                <p class="price-title">giá từ</p>
+                                                <span class="price">2,500,000 đ</span>
+                                            </div>
+                                            <a href="" style="float: right;" class="btn btn--placeholder">Giữ chỗ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="list-tour__item">
+                            <div class="list-tour__item-detail">
+                                <div class="list-tour__img">
+                                    <a href=""><img src="./assets/img/slider/da lat.jfif" alt></a>
+                                    <div class="time-slot">
+                                        <span class="list-tour__time">
+                                            <i class="fas fa-clock"></i>                                            </i>                                            
+                                            2 Ngày/1 Đêm
+                                        </span>
+                                        <span class="list-tour__slot">
+                                        </span>
+                                    </div>
+                                    <div class="list-tour__sale">
+                                        <img src="./assets/img/group.png" alt>
+                                        <div class="sale-detail">
+                                            <p class="sale-text">sale</p>
+                                            <span class="sale-price">
+                                                20
+                                                <span class="unit">%</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-tour__content">
+                                    <div class="list-tour__title">
+                                        <h4>
+                                            <a href="">
+                                                ĐÀ LẠT
+                                                <span class="list-tour_time">
+                                                    (2 Ngày/1 Đêm)
+                                                </span>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div class="list-tour__detail">
+                                        <div class="list-tour__left">
+                                            <div class="list-tour__transport">
+                                                <i class="fas fa-walking"></i>
+                                                <span class="transport">Máy Bay & Ô Tô</span>
+                                            </div>
+                                            <div class="list-tour__date">
+                                                <i class="fas fa-calendar-alt"></i>
+                                                <span class="date">2022</span>
+                                            </div>
+                                        </div>
+                                        <div class="list-tour__right">
+                                            <div class="list-tour__price">
+                                                <p class="price-title">giá từ</p>
+                                                <span class="price">2,300,000 đ</span>
+                                            </div>
+                                            <a href="" style="float: right;" class="btn btn--placeholder">Giữ chỗ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-tour__item">
+                            <div class="list-tour__item-detail">
+                                <div class="list-tour__img">
+                                    <a href=""><img src="./assets/img/slider/phu quoc.jpg" alt></a>
+                                    <div class="time-slot">
+                                        <span class="list-tour__time">
+                                            <i class="fas fa-clock"></i>                                            </i>                                            
+                                            3 Ngày/2 Đêm
+                                        </span>
+                                        <span class="list-tour__slot">
+                                        </span>
+                                    </div>
+                                    <div class="list-tour__sale">
+                                        <img src="./assets/img/group.png" alt>
+                                        <div class="sale-detail">
+                                            <p class="sale-text">sale</p>
+                                            <span class="sale-price">
+                                                30
+                                                <span class="unit">%</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-tour__content">
+                                    <div class="list-tour__title">
+                                        <h4>
+                                            <a href="">
+                                                PHÚ QUỐC
+                                                <span class="list-tour_time">
+                                                    (3 Ngày/2 Đêm)
+                                                </span>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div class="list-tour__detail">
+                                        <div class="list-tour__left">
+                                            <div class="list-tour__transport">
+                                                <i class="fas fa-walking"></i>
+                                                <span class="transport">Máy Bay & Ô Tô</span>
+                                            </div>
+                                            <div class="list-tour__date">
+                                                <i class="fas fa-calendar-alt"></i>
+                                                <span class="date">2022</span>
+                                            </div>
+                                        </div>
+                                        <div class="list-tour__right">
+                                            <div class="list-tour__price">
+                                                <p class="price-title">giá từ</p>
+                                                <span class="price">2,700,000 đ</span>
+                                            </div>
+                                            <a href="" style="float: right;" class="btn btn--placeholder">Giữ chỗ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-tour__item">
+                            <div class="list-tour__item-detail">
+                                <div class="list-tour__img">
+                                    <a href=""><img src="./assets/img/slider/sam son.jpg" alt></a>
+                                    <div class="time-slot">
+                                        <span class="list-tour__time">
+                                            <i class="fas fa-clock"></i>                                            </i>                                            
+                                            4 Ngày/3 Đêm
+                                        </span>
+                                        <span class="list-tour__slot">
+                                        </span>
+                                    </div>
+                                    <div class="list-tour__sale">
+                                        <img src="./assets/img/group.png" alt>
+                                        <div class="sale-detail">
+                                            <p class="sale-text">sale</p>
+                                            <span class="sale-price">
+                                                20
+                                                <span class="unit">%</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-tour__content">
+                                    <div class="list-tour__title">
+                                        <h4>
+                                            <a href="">
+                                                SẦM SƠN
+                                                <span class="list-tour_time">
+                                                    (4 Ngày/3 Đêm)
+                                                </span>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div class="list-tour__detail">
+                                        <div class="list-tour__left">
+                                            <div class="list-tour__transport">
+                                                <i class="fas fa-walking"></i>
+                                                <span class="transport">Máy Bay & Ô Tô</span>
+                                            </div>
+                                            <div class="list-tour__date">
+                                                <i class="fas fa-calendar-alt"></i>
+                                                <span class="date">2022</span>
+                                            </div>
+                                        </div>
+                                        <div class="list-tour__right">
+                                            <div class="list-tour__price">
+                                                <p class="price-title">giá từ</p>
+                                                <span class="price">3,000,000 đ</span>
+                                            </div>
+                                            <a href="" style="float: right;" class="btn btn--placeholder">Giữ chỗ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-tour__item">
+                            <div class="list-tour__item-detail">
+                                <div class="list-tour__img">
+                                    <a href=""><img src="./assets/img/slider/quy nhon.jpg" alt></a>
+                                    <div class="time-slot">
+                                        <span class="list-tour__time">
+                                            <i class="fas fa-clock"></i>                                            </i>                                            
+                                            2 Ngày/1 Đêm
+                                        </span>
+                                        <span class="list-tour__slot">
+                                        </span>
+                                    </div>
+                                    <div class="list-tour__sale">
+                                        <img src="./assets/img/group.png" alt>
+                                        <div class="sale-detail">
+                                            <p class="sale-text">sale</p>
+                                            <span class="sale-price">
+                                                15
+                                                <span class="unit">%</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-tour__content">
+                                    <div class="list-tour__title">
+                                        <h4>
+                                            <a href="">
+                                                QUY NHƠN
+                                                <span class="list-tour_time">
+                                                    (2 Ngày/1 Đêm)
+                                                </span>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div class="list-tour__detail">
+                                        <div class="list-tour__left">
+                                            <div class="list-tour__transport">
+                                                <i class="fas fa-walking"></i>
+                                                <span class="transport">Máy Bay & Ô Tô</span>
+                                            </div>
+                                            <div class="list-tour__date">
+                                                <i class="fas fa-calendar-alt"></i>
+                                                <span class="date">2022</span>
+                                            </div>
+                                        </div>
+                                        <div class="list-tour__right">
+                                            <div class="list-tour__price">
+                                                <p class="price-title">giá từ</p>
+                                                <span class="price">2,600,000 đ</span>
+                                            </div>
+                                            <a href="" style="float: right;" class="btn btn--placeholder">Giữ chỗ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-tour__item">
+                            <div class="list-tour__item-detail">
+                                <div class="list-tour__img">
+                                    <a href=""><img src="./assets/img/slider/con dao.jpg" alt></a>
+                                    <div class="time-slot">
+                                        <span class="list-tour__time">
+                                            <i class="fas fa-clock"></i>                                            </i>                                            
+                                            3 Ngày/2 Đêm
+                                        </span>
+                                        <span class="list-tour__slot">
+                                        </span>
+                                    </div>
+                                    <div class="list-tour__sale">
+                                        <img src="./assets/img/group.png" alt>
+                                        <div class="sale-detail">
+                                            <p class="sale-text">sale</p>
+                                            <span class="sale-price">
+                                                25
+                                                <span class="unit">%</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-tour__content">
+                                    <div class="list-tour__title">
+                                        <h4>
+                                            <a href="">
+                                                CÔN ĐẢO
+                                                <span class="list-tour_time">
+                                                    (3 Ngày/2 Đêm)
+                                                </span>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div class="list-tour__detail">
+                                        <div class="list-tour__left">
+                                            <div class="list-tour__transport">
+                                                <i class="fas fa-walking"></i>
+                                                <span class="transport">Máy Bay & Ô Tô</span>
+                                            </div>
+                                            <div class="list-tour__date">
+                                                <i class="fas fa-calendar-alt"></i>
+                                                <span class="date">2022</span>
+                                            </div>
+                                        </div>
+                                        <div class="list-tour__right">
+                                            <div class="list-tour__price">
+                                                <p class="price-title">giá từ</p>
+                                                <span class="price">3,700,000 đ</span>
+                                            </div>
+                                            <a href="" style="float: right;" class="btn btn--placeholder">Giữ chỗ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="content-section">
+                <h2 class="section-heading">ĐIỂM ĐẾN NỔI BẬT</h2>
+                <div class="box--text">
+                    Xứng đáng với danh xưng “Rừng vàng biển bạc”, Việt Nam mang đến những bức họa đẹp đến nao lòng dành tặng cho du khách. Dù đang trong rừng sâu hay trầm mình cùng biển lặng, dù mơ màng với làn mây bồng bềnh ở đỉnh núi cao ngất hay hòa mình cùng làn nước đại dương xanh trong, trái tim ai kia vẫn rộn ràng những cung bậc cảm xúc khó tả Yêu lắm một Việt Nam đẹp đến vô ngần.
+                </div>
+                <div class="box-content">
+                    <div class="slick-track" style="opacity: 1; width: 1400px; transform: translate3d(0px, 0px, 0px);">
+                        <div class="box-slide__item slick-slide slick-current slick-active" style="width: 180px;">
+                            <div class="slide-item">
+                                <div class="box-slide__img">
+                                    <img src="./assets/img/hanoi-travel-guide-cover.jpg" alt>
+                                </div>
+                                <div class="box-slide__text">
+                                    <a href=""><span>Hà Nội</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-slide__item slick-slide slick-current slick-active" style="width: 180px;">
+                            <div class="slide-item">
+                                <div class="box-slide__img">
+                                    <img src="./assets/img/diem den noi bat/ur2mrg23d91mex03l4mw.jpg "alt>
+                                </div>
+                                <div class="box-slide__text">
+                                    <a href=""><span>Đà Nẵng</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-slide__item slick-slide slick-current slick-active" style="width: 180px;">
+                            <div class="slide-item">
+                                <div class="box-slide__img">
+                                    <img src="./assets/img/diem den noi bat/Hue.jpg" alt>
+                                </div>
+                                <div class="box-slide__text">
+                                    <a href=""><span>Huế</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-slide__item slick-slide slick-current slick-active" style="width: 180px;">
+                            <div class="slide-item">
+                                <div class="box-slide__img">
+                                    <img src="./assets/img/diem den noi bat/hcm.webp" alt>
+                                </div>
+                                <div class="box-slide__text">
+                                    <a href=""><span>Hồ Chí Minh</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-slide__item slick-slide slick-current slick-active" style="width: 180px;">
+                            <div class="slide-item">
+                                <div class="box-slide__img">
+                                    <img src="./assets/img/diem den noi bat/eo-gio-quy-nhon-2.png.crdownload" alt>
+                                </div>
+                                <div class="box-slide__text">
+                                    <a href=""><span>Quy Nhơn</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-slide__item slick-slide slick-current slick-active" style="width: 180px;">
+                            <div class="slide-item">
+                                <div class="box-slide__img">
+                                    <img src="./assets/img/diem den noi bat/sa pa.jpg" alt>
+                                </div>
+                                <div class="box-slide__text">
+                                    <a href=""><span>Sa Pa</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-slide__item slick-slide slick-current slick-active" style="width: 180px;">
+                            <div class="slide-item">
+                                <div class="box-slide__img">
+                                    <img src="./assets/img/diem den noi bat/hoi an.jfif" alt>
+                                </div>
+                                <div class="box-slide__text">
+                                    <a href=""><span>Hội An</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact">
+            <div class="contact-section">
+                <div class="content-section">
+                    <h2 class="section-heading">LIÊN HỆ</h2>
+                    <p class="section-sub-heading">Thông tin liên hệ</p>
+        
+                    <div class="row">
+                        <div class="col col-half contact-info">
+                            <p><i class="fas fa-map-marker-alt"></i>Đà Nẵng, Việt Nam</p>
+                            <p><i class="fas fa-phone-alt"></i>Hotline: 0123456789</p>
+                            <p><i class="fas fa-envelope"></i>Email: dulich@gmail.com</p>
+                        </div>
+                        <div class="col col-half contact-form">
+                            <form action="">
+                                <div class="row">
+                                    <div class="col col-half">
+                                        <input type="text" name="" placeholder="Name" required="" id="" class="form-control">
+                                    </div>
+                                    <div class="col col-half">
+                                        <input type="email" name="" placeholder="Email" required="" id="" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row mt-8">
+                                    <div class="col col-full">
+                                        <input type="text" name="" placeholder="Message" required id="" class="form-control">
+                                    </div>
+                                </div>
+                                <input class="form-submit-btn mt-16" type="submit" value="SEND">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="footer">
+                <div class="socials-list">
+                    <a href=""><i class="ti-facebook"></i></a>
+                    <a href=""><i class="ti-instagram"></i></a>
+                    <a href=""><i class="ti-youtube"></i></a>
+                    <a href=""><i class="ti-printerest-alt"></i></a>
+                    <a href=""><i class="ti-twitter-alt"></i></a>
+                    <a href=""><i class="ti-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+
+</body>
+</html>
